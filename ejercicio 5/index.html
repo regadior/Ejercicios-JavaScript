@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Realizar programa donde se Introducen de 3 números y el programa indica cuál es el
+    mayor de los 3.  -->
+    <script>
+        let numero1, numero2, numero3;
+        let mayor1, mayor2=0;
+        numero1= prompt("Introduce un numero");
+        numero2= prompt("Introduce un numero2");
+        numero3= prompt("Introduce un numero3");
+        // Primera Forma
+        mayor1=Math.max(numero1,numero2,numero3)
+        document.write(`Mayor:  ${mayor1}`);
+
+        // Segunda Forma
+        const numeros=[numero1,numero2,numero3];
+        for (let i = 0; i < numeros.length; i++) {
+            if (numeros[i] > mayor2) {
+                mayor2=numeros[i];
+            }
+        }
+        document.write(`Mayor:  ${mayor2}`);
+    </script>
+</body>
+</html>
