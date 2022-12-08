@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Queremos programar un juego de dados en un página web.
+    El usuario empieza con 50€ para poder apostar.
+    El usuario decide a que número apuesta del 1 al 6, y también que cantidad de euros quiere apostar.
+    Se “lanza” un dado (asignación al azar de un número del a 1 al 6)
+    Si el usuario acierta el número, gana el doble de lo que ha postado. Si no acierta, pierde todo lo apostado.
+    El juego acaba cuand el usuario llega a 0 euros o al llegar a 200 euros -->
+    <script>
+        let dinero=50;
+        let apostado;
+        let eleccion;
+        let dado;
+        dado= Math.floor(Math.random()*6);
+        apostado=prompt("Intruduce lo que va a apostar");
+        eleccion=prompt("Elige un numero entre 0 y 6");
+        if (dado == eleccion) {
+            document.write(`El resultado es ${dado} y tu elegiste ${eleccion} ganas un x2`);
+            dinero=apostado*2;
+            document.write(`saldo ${dinero}`);
+
+        } else {
+            document.write(`El resultado es ${dado} y tu elegiste ${eleccion}`);
+            dinero=dinero-apostado;
+            document.write(`saldo ${dinero}`);50
+
+        }
+    </script>
+</body>
+
+</html>
