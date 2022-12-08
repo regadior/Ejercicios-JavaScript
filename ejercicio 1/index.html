@@ -10,9 +10,33 @@
 
 <body>
     <!-- https://lemus.webs.upv.es/wordpress/wp-content/uploads/2018/07/javascript-es6-ejercicios-resueltos-parte-1.pdf -->
-    <script>
-        document.writeln("Hola Mundo!"); 
-    </script>
+    <!-- Ejercicios de Resumen -->
+    <!-- Programa que lee tres notas de un alumno, calcula la media e indicar el valor de la nota y la palabra
+    “Excelente” si tiene un valor mayor que 8 , “Aprobado” entre 5 y 8 , “Suspendido” < 5  -->
+        <script>
+            let nota1, nota2, nota3;
+            let media;
+            let resultado;
+            dato1= prompt("Nota1");
+            dato2= prompt("Nota2");
+            dato3= prompt("Nota3");
+            nota1= parseInt(dato1);
+            nota2= parseInt(dato2)
+            nota3= parseInt(dato3)
+            media=(nota1+nota2+nota3)/3;
+
+            if (media>=8) {
+                resultado="“Excelente”";
+            } else if(media>=5){
+                resultado="aprobado";
+
+            }else{
+                resultado="suspenso";
+            }
+            document.write(`La nota media es ${media} y es un ${resultado}`)
+
+        </script>
+
 </body>
 
 </html>
